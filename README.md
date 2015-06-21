@@ -1,4 +1,4 @@
-# Publishing NW.js apps on the Mac App Store
+# A guide to publish NW.js apps on the Mac App Store
 
 
 # Getting the MAS-compatible executable
