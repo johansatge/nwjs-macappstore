@@ -81,7 +81,7 @@ git apply ../../../webkit.diff
 
 *Project dependencies are located in the `third_party` directory, and are ignored, so we init an empty Git repo to apply the patch.*
 
-# Build
+## Build
 
 ```bash
 # Assumes cwd is nwjs-source
