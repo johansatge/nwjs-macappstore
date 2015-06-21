@@ -7,6 +7,12 @@ You will need to download the source code and apply various patches on it.
 
 This guide is based on @alexeyst's [node-webkit-macappstore](https://github.com/alexeyst/node-webkit-macappstore/blob/master/node-webkit-mas.diff) repository.
 
+1. [Get the source](#get-the-source)
+2. [Get the patches](#get-the-patches)
+3. [Patch NW.js](#patch-nwjs)
+4. [Patch WebKit](#patch-webkit)
+5. [Build](#build)
+
 ## Get the source
 
 ### Get the Chromium depot_tools
@@ -48,7 +54,7 @@ gclient sync --no-history
 
 *Downloaded code can use up to 4GB.*
 
-### Get the patches
+## Get the patches
 
 ```bash
 # Assumes cwd is nwjs-source
@@ -88,4 +94,4 @@ ninja -C out/Release nw -j4
 
 Some warnings may appear during the compilation.
 
-When it is done, you can get test binary: `nwjs-source/src/out/Release/nwjs.app`.
+When it is done, you can test the binary: `nwjs-source/src/out/Release/nwjs.app`.
