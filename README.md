@@ -69,7 +69,7 @@ Once your icon is ready, move it to `yourapp.app/Contents/Resources/nw.icns` (ov
 
 The `Info.plist` file (located in `yourapp.app/Contents` is used on OS X to display your app informations, and on the Mac App Store for identification purposes. You will need to update it.
 
-You may start from this [sample file](plist/Info.plist).
+You may start from this [sample file](Info.plist).
 
 You can override the existing file, and update the following fields:
 
