@@ -1,4 +1,4 @@
-# A guide to publish NW.js apps on the Mac App Store
+# Publishing NW.js apps on the Mac App Store: a detailed guide
 
 1. [Important informations](#important-informations)
 1. [Packaging your app](#packaging-your-app)
@@ -66,11 +66,11 @@ You will need a `.icns` file, size `1024x1024`.
 
 If you work with a `.png` file, you can convert it with a tool like [png2icns](https://github.com/daveish/png2icns).
 
-Once your icon is ready, move it to `yourapp.app/Contents/Resources/nw.icns` (override the existing one).
+Once your icon is ready, move it to `yourapp.app/Contents/Resources/nw.icns` , by overriding the existing one.
 
 ## Configuring the plist file
 
-The `Info.plist` file (located in `yourapp.app/Contents` is used on OS X to display your app informations, and on the Mac App Store for identification purposes. You will need to update it.
+The `Info.plist` file (located in `yourapp.app/Contents`) is used on OS X to display your app informations, and on the Mac App Store for identification purposes. You will need to update it.
 
 You may start from this [sample file](Info.plist).
 
