@@ -1,5 +1,6 @@
 # A guide to publish NW.js apps on the Mac App Store
 
+1. [Important informations](#important-informations)
 1. [Packaging your app](#packaging-your-app)
 2. [Installing your app icon](#installing-your-app-icon)
 3. [Configuring the plist file](#configuring-the-plist-file)
@@ -9,21 +10,23 @@
 6. [Submitting the app for validation](#submitting-the-app-for-validation)
 7. [Thanks](#thanks)
 
-## Getting the compatible binary
+## Important informations
 
-First, please be aware that **NW.js** currently does not officially supports publishing on the Mac App Store.
+Please be aware that **NW.js** currently does not officially supports publishing on the Mac App Store.
 
-To comply with the MAS rules, you will need to use a patched, custom binary.
+NW.js is based on Chromium, which uses *private APIs* ([what is a private API](http://stackoverflow.com/questions/3000681/what-are-private-apis)), that are not allowed on the MAS.
 
-It can be downloaded on the alexeyst's [node-webkit-macappstore](https://github.com/alexeyst/node-webkit-macappstore) repository.
+So to comply with the MAS rules, you will need to use a patched, custom binary in which those APIs are no longer used.
 
-You need the `nwjs.app` file (or `node-webkit.app`, depending on the version you are using).
+This binary has been tested and is used to run several applications on the MAS, but keep in mind that you may come across unexpected issues.
 
 If you want more informations, or compile the binary by yourself, you can check [this document](COMPILING.md).
 
-*This binary has been tested and runs several applications on the MAS, but keep in mind that you may run in unexpected issues.*
-
 ## Packaging your app
+
+The custom `nwjs.app` application you need to use can be downloaded on the alexeyst's [node-webkit-macappstore](https://github.com/alexeyst/node-webkit-macappstore) repository.
+
+You have to get the `nwjs.app` file (or `node-webkit.app`, depending on the version you want to use).
 
 ### Standard packaging
 
@@ -42,13 +45,13 @@ To ensure proper validation, you have to check thoses steps:
 Delete the FFMPEG library:
 
 ```bash
-`rm yourapp.app/Contents/Frameworks/nwjs Framework.framework/Libraries/ffmpegsumo.so
+rm yourapp.app/Contents/Frameworks/nwjs Framework.framework/Libraries/ffmpegsumo.so
 ```
 
 Delete `.DS_Store` files that may have been generated when you were working on your app:
 
 ```bash
-`cd yourapp.app && find . -name "*.DS_Store" -type f -delete
+cd yourapp.app && find . -name "*.DS_Store" -type f -delete
 ```
 
 Remove the `crash_inspector` file, if it exists in your app:
