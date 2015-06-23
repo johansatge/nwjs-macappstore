@@ -1,4 +1,6 @@
 
+![Icon](icon.jpg)
+
 [The guide](https://github.com/johansatge/nwjs-macappstore/wiki) is available on the Wiki.
 
 Feel free to post comments and ideas in the [issues](https://github.com/johansatge/nwjs-macappstore/issues).
