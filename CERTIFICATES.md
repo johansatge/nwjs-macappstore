@@ -2,14 +2,12 @@
 
 *This guide assumes you have an active developer account. If this is not the case, you can visit the [Apple Developer Program](https://developer.apple.com/programs/) page, and click on Enroll. Applying costs $100 per year.*
 
-Apps on the Mac App Store are signed. To sign your app, you will need to have certificates installed on your machine.
-
-A few words about code signing ([source](https://developer.apple.com/library/mac/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)):
+Apps on the Mac App Store are signed. A few words about it ([source](https://developer.apple.com/library/mac/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)):
 
 > Code signing is a security technology, used in OS X, that allows you to certify that an app was created by you.
 > Once an app is signed, the system can detect any change to the app—whether the change is introduced accidentally or by malicious code.
 
-To sign your app, two certificates are needed:
+To sign your app, you will need to have two certificates installed on your machine.
 
 * A **Mac App Distribution** certificate - used to sign the `.app` file
 * A **Mac Installer Distribution** certificate - used to sign the `.pkg` file that will be uploaded to the MAS
