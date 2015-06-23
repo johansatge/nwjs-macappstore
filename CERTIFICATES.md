@@ -14,7 +14,7 @@ To sign your app, you will need to have two certificates installed on your machi
 
 ### Preparing the request
 
-To request a certificate you need a `.certSigningRequest` file.
+To request your certificates you need a `.certSigningRequest` file.
 
 Open `/Applications/Utilities/Keychain Access.app`; in the app menu, and select *Request a Certificate From A Certificate Authority...*:
 
@@ -62,6 +62,6 @@ The installed certificates look like this:
 
 ![Capture](screenshots/installed_certificates.jpg)
 
-Note the string in parenthesis (beginning with `LK7` on the capture).
+Save the string in parenthesis (beginning with `LK7` on the capture).
 
 When signing the app, we will refer to it as the **identity**.
