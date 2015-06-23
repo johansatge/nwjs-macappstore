@@ -91,6 +91,8 @@ You may need to add other fields, to associate a file extension to your app, for
 
 ## Signing the app
 
+*Prior to signing your app, you have to request and install certificates from the Apple Member Center. To do so, you can follow [this guide](CERTIFICATES.md).*
+
 ### Configuring the permissions
 
 Due to the `NW.js` structure, we have to sign the four following apps:
@@ -151,11 +153,28 @@ Complete list of rules is available [here](https://developer.apple.com/library/i
 
 ### Signing commands
 
-We assume that you have saved both files, `child.plist` and `parent.plist`, in the same directory than `yourapp.app`.
+We assume that you have saved both files as `child.plist` and `parent.plist`.
 
-You can now start the signing commands:
+You can now run the signing commands:
 
-@todo
+```bash
+
+export IDENTITY=LK12345678 # Update with your identity (saved when generating the certificates)
+export BUNDLE_ID=com.yourcompanyname.yourappname
+export PARENT_PLIST=/path/to/parent.plist
+export CHILD_PLIST=/path/to/child.plist
+export APP_PATH=/path/to/yourapp.app
+
+codesign --deep -s IDENTITY -i BUNDLE_ID --entitlements CHILD_PLIST $APP_PATH"/Contents/Frameworks/nwjs Helper.app"
+
+codesign --deep -s IDENTITY -i BUNDLE_ID --entitlements CHILD_PLIST $APP_PATH"/Contents/Frameworks/nwjs Helper EH.app"
+
+codesign --deep -s IDENTITY -i BUNDLE_ID --entitlements CHILD_PLIST $APP_PATH"/Contents/Frameworks/nwjs Helper NP.app"
+
+codesign --deep -s IDENTITY -i BUNDLE_ID --entitlements PARENT_PLIST APP_PATH
+
+```
+
 
 ## Uploading the app
 
