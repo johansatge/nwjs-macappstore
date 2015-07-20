@@ -1,5 +1,9 @@
-## Publishing NW.js apps on the Mac App Store: a detailed guide
-
 ![Icon](icon.jpg)
 
-[The guide](https://github.com/johansatge/nwjs-macappstore/wiki) is available on the Wiki.
+## This guide has been moved
+
+It is now part of the [official nw.js wiki](https://github.com/nwjs/nw.js/wiki/Mac-App-Store-%28MAS%29-Submission-Guideline).
+
+Thanks !
+
+*Updated the 20th of July, 2015*
